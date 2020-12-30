@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.blogService.getBlogList().subscribe(response =>{
       this.blogList = response;
-      this.blogList.reverse();
+      // this.blogList.reverse();
       this.config = {
         itemsPerPage: 5,
         currentPage: 1,

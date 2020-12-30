@@ -17,13 +17,14 @@
     <div class="row mb-4 wow fadeIn" >
       <div class="col-lg-4 col-md-6 mb-4" *ngFor="let blog of blogList | paginate: config; let i = index;">
         <div class="card">
-          <div class="view overlay">
-            <img src={{blog.imageURL}} class="card-img-top" alt="">
+          <div class="view overlay zoom rounded" fxLayoutAlign="space-around top">
+            <img  src={{blog.imageURL}} class="card-img-top" alt="">
           </div>
           <div class="card-body">
+            <span class="blogdate">{{blog.createDate}}</span>
             <h4 class="card-title">{{blog.blogTitle}}</h4>
             <p class="card-text">{{blog.blogDescription}}</p>
-            <a href="https://mdbootstrap.com/education/tech-marketing/automated-app-introduction/" target="_blank"
+            <a routerLink="/blogread/{{blog.Id}}"
               class="btn btn-primary btn-md">Read Here
               <i class="fas fa-play ml-2"></i>
             </a>

@@ -3,18 +3,21 @@
     color: #fd8204;
     border-color: #fd8204;
 }
-#sitebanner{
+#sitebanner {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+img {
+    height: 260px;
+    object-fit: cover;
+}
+.blogdate {
+    font-size: .6em;
+}
 
 @media (max-width: 480px) { 
     h1, .h1{
         font-size: 1.5em !important;
-    }
-    #sitebanner{
-
     }
 }
 

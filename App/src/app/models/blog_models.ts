@@ -1,5 +1,5 @@
 export class blog {
-    id: string;
+    Id: string;
     createDate: string;
     imageURL: string;
     blogTitle: string;
