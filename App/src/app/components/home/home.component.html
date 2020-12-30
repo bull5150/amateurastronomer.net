@@ -1,0 +1,37 @@
+<div class="mt-5 pt-5 container">
+  <section id="sitebanner" class="card wow fadeIn" style="background-image: url(https://lh3.googleusercontent.com/HsnI6FtKGuZRarKTdqoM-AQDa9SwgIF_pp-J5OFanaxnTN86k3IFNtcRHeZ2abTbsGLKEsCWjFdoPXSJ26d6AsdMA68kkeEm38hwVcEIKEjaxsQVNzpJKfyX98BXFTjmuJHaIeO3dkE);">
+    <div class="card-body text-white text-center py-5 px-5 my-5">
+      <h1 class="mb-4">
+        <strong>AmateurAstronomer.Net</strong>
+      </h1>
+      <p>
+        <strong>A place to document my struggles</strong>
+      </p>
+      <p class="mb-4">
+        <strong>I am just getting started at Astronomy and Astrophotography and decided to create a blog site to combine all my hobbies.  My hope is by blogging you can read my failures, and not repeat my mistakes and to show off some of my photos.</strong>
+      </p>
+    </div>
+  </section>
+  <hr class="my-5">
+  <section class="text-center">
+    <div class="row mb-4 wow fadeIn" >
+      <div class="col-lg-4 col-md-6 mb-4" *ngFor="let blog of blogList | paginate: config; let i = index;">
+        <div class="card">
+          <div class="view overlay">
+            <img src={{blog.imageURL}} class="card-img-top" alt="">
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">{{blog.blogTitle}}</h4>
+            <p class="card-text">{{blog.blogDescription}}</p>
+            <a href="https://mdbootstrap.com/education/tech-marketing/automated-app-introduction/" target="_blank"
+              class="btn btn-primary btn-md">Read Here
+              <i class="fas fa-play ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+  </section>
+</div>
+ 

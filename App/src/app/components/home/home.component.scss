@@ -1,0 +1,25 @@
+.btn {
+    background-color: grey;
+    color: #fd8204;
+    border-color: #fd8204;
+}
+#sitebanner{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+@media (max-width: 480px) { 
+    h1, .h1{
+        font-size: 1.5em !important;
+    }
+    #sitebanner{
+
+    }
+}
+
+@media (max-width: 375px) { 
+    h1, .h1{
+        font-size: 1.5em !important;
+    }
+}
