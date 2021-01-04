@@ -43,14 +43,14 @@ namespace RestAPICore
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "RestAPIcore for JeffreyHeldridge.com",
+                    Title = "RestAPIcore for Amateur Astronomer.Net",
                     Version = "v1",
-                    Description = "New .Net5.0 API for Jeffrey Heldridge.com",
+                    Description = ".Net5.0 API for Amateur Astronomer.Net",
                     Contact = new OpenApiContact
                     {
                         Name = "Jeff Heldridge",
                         Email = string.Empty,
-                        Url = new Uri("https://jeffreyheldridge.com/#/"),
+                        Url = new Uri("http://amateurastronomer.net/"),
                     },
                 });
 
@@ -67,10 +67,10 @@ namespace RestAPICore
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                //Load Swagger
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "RestAPIcore v1"));
             }
-            //Load Swagger
-            app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "RestAPIcore v1"));
 
             //Use Default Pages ie index.html
             app.UseDefaultFiles();

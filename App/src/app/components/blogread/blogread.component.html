@@ -1,3 +1,8 @@
 <div id="blogWrapper">
-    {{this.blogID}}
+    <div id="photoblog">
+        <img src={{blog.imageURL}} class="center">
+    </div>
+    <h3>{{blog.blogTitle}}</h3>
+    <div id="blog" [innerHTML]="blog.blogEntry | safeHTML: 'html'">
+    </div>
 </div>

@@ -13,15 +13,19 @@ export class HomeComponent implements OnInit {
   config: any;
 
   constructor(private blogService:BlogService,) { 
-
+    this.config = {
+      itemsPerPage: 6,
+      currentPage: 1,
+      totalItems: 1
+    };
   }
 
   ngOnInit(): void {
     this.blogService.getBlogList().subscribe(response =>{
       this.blogList = response;
-      // this.blogList.reverse();
+      this.blogList.reverse();
       this.config = {
-        itemsPerPage: 5,
+        itemsPerPage: 6,
         currentPage: 1,
         totalItems: this.blogList.length
       };

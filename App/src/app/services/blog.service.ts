@@ -9,9 +9,19 @@ export class BlogService {
 
   constructor(private http: HttpClient) { }
 
+  public getBlog(id: string)
+  {
+    return this.http.get<blog>('api/blog/' + id);
+  }
+
   public getBlogList()
   {
-    return this.http.get<blog[]>('api/blog/hardcoded');
+    return this.http.get<blog[]>('api/blog');
+  }
+
+  public postBlog(blogEntry: blog)
+  {
+    return this.http.post<blog>('api/blog', blogEntry);
   }
 
 }

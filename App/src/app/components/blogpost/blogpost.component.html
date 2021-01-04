@@ -1,0 +1,53 @@
+<div id="postwrapper">
+    <div id="signin" *ngIf="this.admin == false">
+        <h3>Admin Login</h3>
+        <label for="user">User Name:</label>
+        <input type="text" class="form-control" id="date" [(ngModel)]="username">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="date" [(ngModel)]="password">
+        <br/>
+        <button type="submit" class="btn btn-success" (click)="login();">Submit</button>
+    </div>
+    <div id="blogForms" *ngIf="this.admin == true">
+        <div id="blogbuilder">
+            <h3>Blog Post</h3>
+            <label for="date">ID:</label>
+            <input type="text" class="form-control" id="date" [(ngModel)]="blogModel.Id" disabled>
+            <label for="date">Date:</label>
+            <input type="text" class="form-control" id="date" [(ngModel)]="blogModel.createDate">
+            <label for="date">Image:</label>
+            <input type="text" class="form-control" id="image" [(ngModel)]="blogModel.imageURL">
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" id="title" [(ngModel)]="blogModel.blogTitle">
+            <label for="description">Description:</label>
+            <textarea rows="5" class="form-control" id="description" [(ngModel)]="blogModel.blogDescription"></textarea>
+            <label for="entry">Entry:</label>
+            <ckeditor [(ngModel)]="blogModel.blogEntry"></ckeditor>
+            <br/>
+            <button type="submit" class="btn btn-success" (click)="onSubmit();">Submit</button>
+            <button type="button" class="btn btn-default" (click)="newBlog();">Clear</button>       
+        </div>
+        <h3>Card Preview</h3>
+        <div id="card" class="row mb-4 wow fadeIn" >
+            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <div class="view overlay zoom rounded" fxLayoutAlign="space-around top">
+                <img  src={{blogModel.imageURL}} onError="" class="card-img-top" alt="">
+                </div>
+                <div class="card-body">
+                <span class="blogdate">{{blogModel.createDate}}</span>
+                <h4 class="card-title">{{blogModel.blogTitle}}</h4>
+                <p class="card-text">{{blogModel.blogDescription}}</p>
+                <a routerLink=""
+                    class="btn btn-primary btn-md">Read Here
+                    <i class="fas fa-play ml-2"></i>
+                </a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <h3>Preview</h3>
+        <div id="preview" [innerHTML]="blogModel.blogEntry">
+        </div>
+    </div>
+</div>
