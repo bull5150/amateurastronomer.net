@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { BlogService } from 'src/app/services/blog.service';
 import { blog } from 'src/app/models/blog_models';
 
+declare let ga: Function;
+
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
@@ -18,6 +20,8 @@ export class HomeComponent implements OnInit {
       currentPage: 1,
       totalItems: 1
     };
+    ga('set', 'page', 'home');
+    ga('send', 'pageview');
   }
 
   ngOnInit(): void {

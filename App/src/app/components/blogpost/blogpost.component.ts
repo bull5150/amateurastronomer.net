@@ -4,6 +4,8 @@ import { BlogService } from 'src/app/services/blog.service';
 import { AdminService } from 'src/app/services/admin.service';
 import { creds } from 'src/app/models/admin_models';
 
+declare let ga: Function;
+
 @Component({
   selector: 'blogpost',
   templateUrl: './blogpost.component.html',
@@ -24,7 +26,10 @@ export class BlogpostComponent implements OnInit {
     blogEntry: ""
   } 
 
-  constructor(private blogService: BlogService, private adminService: AdminService) { }
+  constructor(private blogService: BlogService, private adminService: AdminService) {
+    ga('set', 'page', 'blogpost');
+    ga('send', 'pageview');
+  }
 
   ngOnInit(): void {
     this.adminService.getAdminCreds().subscribe(response =>{
