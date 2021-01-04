@@ -17,3 +17,10 @@ blockquote {
     background-repeat: no-repeat !important;
     text-indent: 23px !important;
 }
+#blog img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}

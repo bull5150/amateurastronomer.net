@@ -22,6 +22,7 @@ import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BlogreadComponent } from './components/blogread/blogread.component';
 import { BlogpostComponent } from './components/blogpost/blogpost.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { BlogpostComponent } from './components/blogpost/blogpost.component';
     FooterComponent,
     BlogreadComponent,
     BlogpostComponent,
-    SafeHTMLPipe
+    SafeHTMLPipe,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,

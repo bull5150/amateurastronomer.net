@@ -24,10 +24,12 @@
             <span class="blogdate">{{blog.createDate}}</span>
             <h4 class="card-title">{{blog.blogTitle}}</h4>
             <p class="card-text">{{blog.blogDescription}}</p>
-            <a routerLink="/blogread/{{blog.Id}}"
-              class="btn btn-primary btn-md">Read Here
-              <i class="fas fa-play ml-2"></i>
+            <a class="link-text" routerLink="/blogread/{{blog.Id}}">
+              <h5 class="waves-light" mdbWavesEffect>Read more
+                <mdb-icon fas icon="chevron-right" class="waves-light" mdbWavesEffect></mdb-icon>
+              </h5>
             </a>
+
           </div>
         </div>
       </div>
