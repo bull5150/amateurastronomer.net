@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --apptheme: #73C2FB;
+    --bannertheme: rgba(115,194,251,.75);
+}
 .ngx-pagination .current {
     background-color: grey !important;
 }
@@ -16,6 +20,8 @@ blockquote {
     background-position: middle left !important;
     background-repeat: no-repeat !important;
     text-indent: 23px !important;
+    margin-left: 10% !important;
+    margin-right: 10% !important;
 }
 #blog img {
     display: block;
@@ -23,4 +29,11 @@ blockquote {
     margin-right: auto;
     margin-bottom: 25px;
     border-radius: 8px;
+}
+
+@media (max-width: 480px) { 
+    blockquote {
+        margin-left: 5% !important;
+        margin-right: 5% !important;
+    }
 }

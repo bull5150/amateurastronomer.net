@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { BlogreadComponent } from './components/blogread/blogread.component';
 import { BlogpostComponent } from './components/blogpost/blogpost.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { EmailComponent } from './components/email/email.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'blogread/:blogid', component: BlogreadComponent },
   { path: 'blogpost', component: BlogpostComponent },
   { path: 'gallery', component: GalleryComponent },
+  { path: 'email', component: EmailComponent },
 ];
 
 @NgModule({

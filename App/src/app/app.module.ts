@@ -1,7 +1,7 @@
 //NPM Packages
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CKEditorModule } from 'ckeditor4-angular';
@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //Services
 import { BlogService } from './services/blog.service';
 import { AdminService } from './services/admin.service';
+import { EmailService } from './services/email.service';
 //Pipes
 import { SafeHTMLPipe } from './pipes/safe-html.pipe';
 //Components
@@ -23,6 +24,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BlogreadComponent } from './components/blogread/blogread.component';
 import { BlogpostComponent } from './components/blogpost/blogpost.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { EmailComponent } from './components/email/email.component';
+
 
 
 @NgModule({
@@ -34,7 +37,8 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     BlogreadComponent,
     BlogpostComponent,
     SafeHTMLPipe,
-    GalleryComponent
+    GalleryComponent,
+    EmailComponent
   ],
   imports: [
     BrowserModule,
@@ -45,8 +49,9 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     NgxPaginationModule,
     CKEditorModule,
     FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [BlogService, AdminService],
+  providers: [BlogService, AdminService, EmailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

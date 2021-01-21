@@ -1,10 +1,10 @@
 .btn {
     background-color: grey;
-    color: #fd8204;
-    border-color: #fd8204;
+    color: var(--apptheme);
+    border-color: var(--apptheme);
 }
 a {
-    color: #fd8204;
+    color: var(--apptheme);
 }
 #sitebanner {
     background-repeat: no-repeat;
@@ -16,6 +16,12 @@ img {
 }
 .blogdate {
     font-size: .6em;
+    color: var(--apptheme);
+}
+#loadingmask{
+    margin-bottom: 250px;
+    margin-top: 50px;
+    color: var(--apptheme);
 }
 
 @media (max-width: 480px) { 

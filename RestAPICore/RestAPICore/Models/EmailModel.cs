@@ -13,6 +13,5 @@ namespace RestAPICore.Models
         public string lName { get; set; }
         public string reason { get; set; }
         public string reciept { get; set; }
-        public string company { get; set; }
     }
 }

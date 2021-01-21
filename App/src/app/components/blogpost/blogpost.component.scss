@@ -14,8 +14,8 @@
 }
 .btn {
     background-color: grey;
-    color: #fd8204;
-    border-color: #fd8204;
+    color: var(--apptheme);
+    border-color: var(--apptheme);
 }
 #signin {
     margin: auto;

@@ -12,6 +12,7 @@ declare let ga: Function;
 export class HomeComponent implements OnInit {
 
   public blogList: blog[];
+  public loaded: boolean;
   config: any;
 
   constructor(private blogService:BlogService,) { 
@@ -25,6 +26,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.loaded = false;
     this.blogService.getBlogList().subscribe(response =>{
       this.blogList = response;
       this.blogList.reverse();
@@ -33,6 +35,7 @@ export class HomeComponent implements OnInit {
         currentPage: 1,
         totalItems: this.blogList.length
       };
+      this.loaded = true;
     });
   }
 

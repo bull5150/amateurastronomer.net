@@ -12,8 +12,8 @@ namespace RestAPICore.Services
         public string AzureSendGridKey { get; set; }
         public async Task sendEmail(Models.EmailModel email)
         {
-            string fromAddress = "JeffreyHeldridge@JeffreyHeldridge.com";
-            string SubjectName = "Resume App";
+            string fromAddress = "AmateurAstronomer@AA.net";
+            string SubjectName = "AA.Net Contact";
             var client = new SendGridClient(AzureSendGridKey);
             var msg = new SendGridMessage();
 
@@ -30,14 +30,13 @@ namespace RestAPICore.Services
             //msg.AddContent(MimeType.Text, messages);  
             msg.AddContent(MimeType.Html, "From: " + email.fName + " " + email.lName +
                 "<br/>@" + email.fromEmail +
-                "<br/>Company: " + email.company +
                 "<br/><br/>" + email.message);
             var response = await client.SendEmailAsync(msg);
         }
         public async Task sendReciept(Models.EmailModel email)
         {
-            string fromAddress = "JeffreyHeldridge@JeffreyHeldridge.com";
-            string SubjectName = "Jeffrey Heldridge Resume App Reciept";
+            string fromAddress = "AmateurAstronomer@aa.net";
+            string SubjectName = "AA.Net Contact";
             var client = new SendGridClient(AzureSendGridKey);
             var msg = new SendGridMessage();
 
@@ -51,7 +50,7 @@ namespace RestAPICore.Services
 
             msg.SetSubject("DO NOT REPLY");
             msg.AddContent(MimeType.Html, "Thanks for the " + email.reason.ToUpper() +
-                " email, I have recieved it. <br/>Jeff Heldridge");
+                " email, I have recieved it.<br/>Jeff Heldridge");
             var response = await client.SendEmailAsync(msg);
         }
     }

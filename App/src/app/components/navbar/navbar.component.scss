@@ -3,15 +3,22 @@ img {
     margin-right: 5px,
 }
 mdb-navbar-brand {
-    margin-right: 25px,
+    margin-right: 25px;
+    color: #000;
 }
 a {
-    color: #333!important;
+    color: var(--apptheme) !important;
     font-size: 1.2em;
 }
+a:hover {
+    color: #000 !important;
+}
+i {
+    color: #000 !important;
+}
 .letterhighlight{
-    color: #fd8204;
-    font-size: 1.5em;
+    color: var(--apptheme);
+    font-size: 2em;
 }
 
 
