@@ -24,6 +24,11 @@ small{
     background-color:var(--apptheme);
     border-color: #9e9e9e ;
 }
+h3 {
+    text-align: center;
+    color: var(--apptheme);
+    font-style: italic;
+}
 
 /* Landscape phones and down */
 @media (max-width: 480px) { 

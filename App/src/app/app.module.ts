@@ -25,6 +25,9 @@ import { BlogreadComponent } from './components/blogread/blogread.component';
 import { BlogpostComponent } from './components/blogpost/blogpost.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { EmailComponent } from './components/email/email.component';
+import { AboutComponent } from './components/about/about.component';
+import { ResourcesComponent } from './components/resources/resources.component';
+import { GearComponent } from './components/gear/gear.component';
 
 
 
@@ -38,7 +41,10 @@ import { EmailComponent } from './components/email/email.component';
     BlogpostComponent,
     SafeHTMLPipe,
     GalleryComponent,
-    EmailComponent
+    EmailComponent,
+    AboutComponent,
+    ResourcesComponent,
+    GearComponent
   ],
   imports: [
     BrowserModule,

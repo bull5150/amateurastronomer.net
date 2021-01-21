@@ -10,6 +10,6 @@ export class EmailService {
 
   public postEmail(email: email)
   {
-    return this.http.post<string>('api/email', email);
+    return this.http.post('api/email', email, {responseType: 'text'});
   }
 }

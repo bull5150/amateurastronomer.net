@@ -18,7 +18,7 @@ namespace RestAPICore.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("")]
-        public string sendEmail(Models.EmailModel email)
+        public ActionResult<string> sendEmail(Models.EmailModel email)
         {
             emailService.sendEmail(email).GetAwaiter();
             if (email.reciept == "yes")

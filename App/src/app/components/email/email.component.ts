@@ -7,12 +7,11 @@ import { Router } from '@angular/router';
 declare let ga: Function;
 
 @Component({
-  selector: 'app-email',
+  selector: 'email',
   templateUrl: './email.component.html',
   styleUrls: ['./email.component.scss']
 })
 export class EmailComponent implements OnInit {
-
 
   public emailForm: FormGroup;
   public postForm: email;
@@ -40,7 +39,6 @@ export class EmailComponent implements OnInit {
     });
   }
   submit(){
-    console.log(this.emailForm.value.email.indexOf("."));
     if(this.emailForm.value.email.indexOf("@") == -1 || this.emailForm.value.email.indexOf(".") == -1)
     {
       alert("Please enter a valid email address.");
