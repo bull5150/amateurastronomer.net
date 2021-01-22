@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+declare let ga: Function;
+
 @Component({
   selector: 'gear',
   templateUrl: './gear.component.html',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GearComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    ga('set', 'page', 'mygear');
+    ga('send', 'pageview');
+  }
 
   ngOnInit(): void {
   }

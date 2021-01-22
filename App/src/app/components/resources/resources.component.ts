@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+declare let ga: Function;
+
 @Component({
   selector: 'resources',
   templateUrl: './resources.component.html',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResourcesComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    ga('set', 'page', 'resources');
+    ga('send', 'pageview');
+  }
 
   ngOnInit(): void {
   }
