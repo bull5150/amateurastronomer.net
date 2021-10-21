@@ -6,3 +6,14 @@ export class blog {
     blogDescription: string;
     blogEntry: string;
 }
+export class blogSubscribe {
+    Id: string;
+    f_name: string;
+    l_name: string;
+    email: string;
+    age: number;
+    phone: string;
+    city: string;
+    state: string;
+    country: string;
+}

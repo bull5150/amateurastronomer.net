@@ -17,4 +17,16 @@ namespace RestAPICore.Models
         string ConnectionString { get; set; }
         string DatabaseName { get; set; }
     }
+    public class BlogSubscribeListModel : IBlogSubscribeListModel
+    {
+        public string BlogSubscribeListCollectionName { get; set; }
+        public string ConnectionString { get; set; }
+        public string DatabaseName { get; set; }
+    }
+    public interface IBlogSubscribeListModel
+    {
+        string BlogSubscribeListCollectionName { get; set; }
+        string ConnectionString { get; set; }
+        string DatabaseName { get; set; }
+    }
 }

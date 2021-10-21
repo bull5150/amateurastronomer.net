@@ -30,10 +30,27 @@ blockquote {
     margin-bottom: 25px;
     border-radius: 8px;
 }
+.maps {
+    width: 512px;
+    display: block;
+    margin: 0 auto;
+}
 
 @media (max-width: 480px) { 
     blockquote {
         margin-left: 5% !important;
         margin-right: 5% !important;
+    }
+    .maps {
+        width: 300px;
+        margin-left: -25px;
+        height: 225px;
+    }
+    #blog img{
+        margin-top: 50px;
+        margin-left: -25px;
+        height: 260px !important;
+        width: 300px !important;
+        object-fit: cover;
     }
 }

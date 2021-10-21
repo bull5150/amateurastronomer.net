@@ -28,6 +28,7 @@ namespace RestAPICore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //setup collections
             services.Configure<BlogDBSettingsModel>(
                 Configuration.GetSection(nameof(BlogDBSettingsModel)));
 
@@ -36,9 +37,18 @@ namespace RestAPICore
 
             services.AddSingleton<BlogService>();
 
+            services.Configure<BlogSubscribeListModel>(
+                Configuration.GetSection(nameof(BlogSubscribeListModel)));
+
+            services.AddSingleton<IBlogSubscribeListModel>(sp =>
+                sp.GetRequiredService<IOptions<BlogSubscribeListModel>>().Value);
+
+            services.AddSingleton<BlogSubscriptionService>();
+
             services.AddControllers()
                 .AddNewtonsoftJson(options => options.UseMemberCasing());
 
+            //add swagger
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
