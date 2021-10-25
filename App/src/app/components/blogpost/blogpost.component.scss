@@ -13,9 +13,9 @@
     object-fit: cover;
 }
 .btn {
-    background-color: grey;
-    color: var(--apptheme);
-    border-color: var(--apptheme);
+    background-color: grey !important;
+    color: var(--apptheme) !important;
+    border-color: var(--apptheme) !important;
 }
 #signin {
     margin: auto;

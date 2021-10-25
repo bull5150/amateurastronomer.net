@@ -6,7 +6,7 @@
         <label for="pwd">Password:</label>
         <input type="password" class="form-control" id="date" [(ngModel)]="password">
         <br/>
-        <button type="submit" class="btn btn-success" (click)="login();">Submit</button>
+        <button type="submit" class="btn btn-Secondary" (click)="login();">Submit</button>
     </div>
     <div id="blogForms" *ngIf="this.admin == true">
         <div id="blogbuilder">
@@ -24,8 +24,8 @@
             <label for="entry">Entry:</label>
             <ckeditor [(ngModel)]="blogModel.blogEntry"></ckeditor>
             <br/>
-            <button type="submit" class="btn btn-success" (click)="onSubmit();">Submit</button>
-            <button type="button" class="btn btn-default" (click)="newBlog();">Clear</button>       
+            <button type="submit" class="btn btn-secondary" (click)="onSubmit();">Submit</button>
+            <button type="button" class="btn btn-warning" (click)="newBlog();">Clear</button>       
         </div>
         <h3>Card Preview</h3>
         <div id="card" class="row mb-4 wow fadeIn" >
@@ -39,7 +39,7 @@
                 <h4 class="card-title">{{blogModel.blogTitle}}</h4>
                 <p class="card-text">{{blogModel.blogDescription}}</p>
                 <a routerLink=""
-                    class="btn btn-primary btn-md">Read Here
+                    class="btn btn-secondary btn-md">Read Here
                     <i class="fas fa-play ml-2"></i>
                 </a>
                 </div>

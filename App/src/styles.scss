@@ -36,21 +36,28 @@ blockquote {
     margin: 0 auto;
 }
 
-@media (max-width: 480px) { 
+@media (max-width: 540px) { 
     blockquote {
         margin-left: 5% !important;
         margin-right: 5% !important;
     }
     .maps {
         width: 300px;
-        margin-left: -25px;
         height: 225px;
     }
     #blog img{
         margin-top: 50px;
-        margin-left: -25px;
         height: 260px !important;
         width: 300px !important;
         object-fit: cover;
+    }
+}
+
+@media (max-width: 375px) { 
+    #blog img{
+        margin-left: -25px;
+    }
+    .maps {
+        margin-left: -25px;
     }
 }

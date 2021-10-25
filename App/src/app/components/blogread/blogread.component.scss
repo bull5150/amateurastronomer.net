@@ -2,11 +2,11 @@
     margin: 5%;
 }
 #photoblog img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 25px;
-    border-radius: 8px;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 25px !important;
+    border-radius: 8px !important;
 }
 
 h3 {
@@ -17,18 +17,18 @@ h3 {
     margin-right: 15%;
 }
 
-@media (max-width: 480px) { 
+@media (max-width: 540px) { 
     #photoblog img{
-        margin-top: 50px;
-        height: 260px;
-        object-fit: cover;
+        margin-top: 50px !important;
+        height: 260px !important;
+        object-fit: cover !important;
     }
 }
 
 @media (max-width: 375px) { 
     #photoblog img{
-        margin-top: 50px;
-        height: 260px;
-        object-fit: cover;
+        margin-top: 50px !important;
+        height: 260px !important;
+        object-fit: cover !important;
     }
 }
