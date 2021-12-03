@@ -1,109 +1,29 @@
-<div id="galleryWrapper">
-    <div id="imageslider">
-        <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
-            <mdb-carousel-item>
-                <img class="d-block w-100" src="https://lh3.googleusercontent.com/hTKJcrs8diZ_D61qfsG1A_ncX1I0Si599vWfl1lY6iwRIakP3gJ3FDlBCzP_ZcuHjr-DqYWjtbgfLOdU1tIo8ztPs4YOpN9y3uim82ePiTZoUeTXGmx3I3jiPFEGoRLaIwQ11GBYFQ0" alt="First slide">
-            </mdb-carousel-item>
-            <mdb-carousel-item>
-                <img class="d-block w-100" src="https://lh3.googleusercontent.com/8QWSbf-5Euh1yoPpXYxDZtDYE_n05ajLWvHHBMYphhNNyiXP7b7bEwNCdt2DooX2TARa2V51QphLGbVhXKR8gyAZNgGF0HPo3phait5dTczmdrd8QFMHyvOncXqlBFFJWbPU9LD2xT0" alt="Second slide">
-            </mdb-carousel-item>
-            <mdb-carousel-item>
-                <img class="d-block w-100" src="https://lh3.googleusercontent.com/tYrnx8ewKty0wdwd0rJU9Sky-P8fm4fJXIIGrvQxWhvXZQh-HYURH5TJYaEp8hxiU6v806jQWT3mvK9K32i6OvqQEj_aNk_x4Bx5CR5uxoiTUPijVCaCo8e33q0d7kqeCZIPHOp49PQ" alt="Third slide">
-            </mdb-carousel-item>
-        </mdb-carousel>
-    </div>
-</div>
-<div id="pictable">
-    <div class="mt-5 pt-5 container">
-        <h3>Gallery</h3>
-        <P class="text-center">(This Page is a work in progress, some day I hope to actually have good pictures to show)</P>
-        <div class="card-group" >
-            <div class="card">
-                <div class="view overlay zoom" fxLayoutAlign="space-around top">
-                <img  src="https://lh3.googleusercontent.com/MV7PbKvy5ZBtXt2SIUdiI3IA-cqILCUgPNOHNDFzpVzeO5puuHKizVWuT0J1FAW-LHRRrJjpG3CjvW1GIFvspfFG-2ThhrAks7zrRrQffVRUzZokY8L4kMEzdfraY1irrs0urBugaGw" class="card-img-top" alt="">
-                </div>
-            </div>
-            <div class="card">
-                <div class="view overlay zoom" fxLayoutAlign="space-around top">
-                <img  src="https://lh3.googleusercontent.com/hTKJcrs8diZ_D61qfsG1A_ncX1I0Si599vWfl1lY6iwRIakP3gJ3FDlBCzP_ZcuHjr-DqYWjtbgfLOdU1tIo8ztPs4YOpN9y3uim82ePiTZoUeTXGmx3I3jiPFEGoRLaIwQ11GBYFQ0" class="card-img-top" alt="">
-                </div>
-            </div>
-            <div class="card">
-                <div class="view overlay zoom" fxLayoutAlign="space-around top">
-                <img  src="https://lh3.googleusercontent.com/ruQxYYJV6dlUUF2O33s090aTUx80KzS5BN39nXQeyCSRKwOsY2Cm92gW3_dLCA-CfTXcW_kJvYLeAyzCzjaI0vCEA1Jv2a3bA-DBsoaMBqBg2rAym2vHo3OBPfFuGic030fbpoaHJA8" class="card-img-top" alt="">
-                </div>
-            </div>
-            <div class="card">
-                <div class="view overlay zoom" fxLayoutAlign="space-around top">
-                <img  src="https://lh3.googleusercontent.com/8QWSbf-5Euh1yoPpXYxDZtDYE_n05ajLWvHHBMYphhNNyiXP7b7bEwNCdt2DooX2TARa2V51QphLGbVhXKR8gyAZNgGF0HPo3phait5dTczmdrd8QFMHyvOncXqlBFFJWbPU9LD2xT0" class="card-img-top" alt="">
-                </div>
-            </div>
+<div id="galleryWrapper" class="mt-5 pt-5 container">
+    <section id="sitebanner" class="card wow fadeIn" style="background-image: url(https://lh3.googleusercontent.com/vgYfVDjJ6N033y7ZPxwTYguIN2A_ixV-WWt-EVaKhtrb7ItnvBZ-ZCyI4oDKkTcuAQdyQ94yNEE88lxlmRDMCEgeopgnG6R3qcWn6eRn5Nvcj9HH_Z3iH176zXt6lNri6dSq2-wPfs0);">
+        <div class="card-body text-white text-center py-5 px-5 my-5">
+            <h1 class="mb-4">
+            <strong>Gallery</strong>
+            </h1>
+            <p class="mb-4">
+            <strong>Below are my 30 latest photos from Instagram.  If you want you can go to Instagram and see all my pictures by clicking the link <span class="iconhighlight"><i class="fab fa-instagram"></i></span> below.  Follow me if you want just to see the results of my latest outings.</strong>
+            </p>
+            <p>
+                <a href="https://www.instagram.com/aadotnet/"><i class="fab fa-instagram fa-2x"></i> aadotnet</a> 
+            </p>
         </div>
-        <div class="card-group" >
-            <div class="card">
-                <div class="view overlay zoom" fxLayoutAlign="space-around top">
-                <img  src="https://lh3.googleusercontent.com/tYrnx8ewKty0wdwd0rJU9Sky-P8fm4fJXIIGrvQxWhvXZQh-HYURH5TJYaEp8hxiU6v806jQWT3mvK9K32i6OvqQEj_aNk_x4Bx5CR5uxoiTUPijVCaCo8e33q0d7kqeCZIPHOp49PQ" class="card-img-top" alt="">
-                </div>
+    </section>
+    <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'"
+        [animation]="'slide'">
+        <mdb-carousel-item *ngFor="let item of slides; let i = index">
+            <div class="col-md-4" [ngClass]="{'d-none d-md-block': cardIndex !== 0}"
+                *ngFor="let post of item; let cardIndex = index">
+                <mdb-card class="my-1">
+                    <mdb-card-img [src]="post.image_url" alt="Card image cap"></mdb-card-img>
+                    <div class="carousel-caption">
+                        <p class="instadescript">{{post.description}}</p>
+                    </div>
+                </mdb-card>
             </div>
-            <div class="card">
-                <div class="view overlay zoom" fxLayoutAlign="space-around top">
-                <img  src="https://lh3.googleusercontent.com/59lkjKqteKi0ydhF2a2s9nXRxR7hG_cNXymtyHWH2_5miTW3gD1zj3NVZjRAoTOJxGxuUaO7dZ_V0ePNpCerTCOrwhfwE27YAGR5AOnVdxZe8CEhCMj_rDBs-V2Vbsj-wcgPxkasfpU" class="card-img-top" alt="">
-                </div>
-            </div>
-            <div class="card">
-                <div class="view overlay zoom" fxLayoutAlign="space-around top">
-                <img  src="https://lh3.googleusercontent.com/VUAk3iCJMmScD_kpTA4DQvu-yBj6P44ACDDd0fJlBs0oc9g2NgYu9MOJV8RL_ydE0aUagwZukU6OMcIeW1Vcupou0RJCFOcAcoHK7oMcMa2v8AUWD9hlkjr2Q7fILuhA2HrmOky4uGs" class="card-img-top" alt="">
-                </div>
-            </div>
-            <div class="card">
-                <div class="view overlay zoom" fxLayoutAlign="space-around top">
-                <img  src="https://lh3.googleusercontent.com/8e8CuOC4X8HTKJhFVEXz9mifzghM0lHM4_MO69xZPWOPOacfG-aU3UuKtvTjYs5vLrkvxBnu3JEKSkt1AvFIgxsbwiAbkGtp3RXALg8X-PEiTkEoYl0IxHks6bkm6Vz6Vs9H-0_6krw" class="card-img-top" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="card-group" >
-            <div class="card">
-                <div class="view overlay zoom" fxLayoutAlign="space-around top">
-                <img  src="https://lh3.googleusercontent.com/Opw1G_n2Zifz0H_sRDbklO3kMWeFqtkFavxvbKF6MONfzM6Gj3YvDytr3UY-KgjgPLu8VfHGOS6IpDDDvnHaPcrdgH-2GbPvSCHpkVgHmm0KSgSeUDfCcHPRPHCVU9UFTP-Ly3U8_NA" class="card-img-top" alt="">
-                </div>
-            </div>
-            <div class="card">
-                <div class="view overlay zoom" fxLayoutAlign="space-around top">
-                <img  src="https://lh3.googleusercontent.com/6ZnFQaWnSkye2TCZ0GxuVihyEpNK5btWtW1tCirS_DIZ-pSCNSCbTI7i_Ceu87GU-296uCGhcEu9cDMnMJavA7KPXe1gXwsUD69bxK_5_asZodC1tuDpuVrTXBbT09MJ2lqL2jJniOM" class="card-img-top" alt="">
-                </div>
-            </div>
-            <div class="card">
-                <div class="view overlay zoom" fxLayoutAlign="space-around top">
-                <img  src="https://lh3.googleusercontent.com/_vRAPyIjxpC7ockXfoTLgt1asGhxtGjfRE3rFCM3BUy-2VgCSzWywKX1eoE4ClYNJT-NMBQLx0Mwo9lzerYP3ulux3Y8XGlvH_t7HYfnCXxwvh4PPdkel2UmISIBlirk5qBY2FCSvvY" class="card-img-top" alt="">
-                </div>
-            </div>
-            <div class="card">
-                <div class="view overlay zoom" fxLayoutAlign="space-around top">
-                <img  src="https://lh3.googleusercontent.com/HsnI6FtKGuZRarKTdqoM-AQDa9SwgIF_pp-J5OFanaxnTN86k3IFNtcRHeZ2abTbsGLKEsCWjFdoPXSJ26d6AsdMA68kkeEm38hwVcEIKEjaxsQVNzpJKfyX98BXFTjmuJHaIeO3dkE" class="card-img-top" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="card-group" >
-            <div class="card">
-              <div class="view overlay zoom" fxLayoutAlign="space-around top">
-                <img  src="https://lh3.googleusercontent.com/IqSMsAnf09ADgv5JiLQTOHjwBSD4eDZki_j-447_gWWSsakO5DhOHZpyNkMq68TcTOGSyvlMRrExXwrMpmIIM2lzBw7VLUUNvP1yha9cyDEW7nS2n00vL1dVwXCmauyCg-7dRp1N1ec" class="card-img-top" alt="">
-              </div>
-            </div>
-            <div class="card">
-              <div class="view overlay zoom" fxLayoutAlign="space-around top">
-                <img  src="https://lh3.googleusercontent.com/UT_7No_1R7MMuQiwfEfE9JHGz7aIGy5PVEMmEyQUxVZwKfMCY-Q6asNTDtNEajAsAdfPKS0GlMKIEZ1rpNmx--3bmzkdVQsyd-u7UAleEzIrA6_zpM5zi-9QAMobuZfIDyJ8T9aERsE" class="card-img-top" alt="">
-              </div>
-            </div>
-            <div class="card">
-              <div class="view overlay zoom" fxLayoutAlign="space-around top">
-                <img  src="https://lh3.googleusercontent.com/9perFT-9wLtJHeI2_Tgo7qnXOWekNT7ZUUg1XX5U8iTXDY8ImZnBWoj1xgxYPBy6BHyyFLtuv5aY1I0QHZQpETOdg1flhmdMB9_aPsRDcCZMmcSVq9BOmsYpC7b8uC4rbovQACBXFJk" class="card-img-top" alt="">
-              </div>
-            </div>
-            <div class="card">
-              <div class="view overlay zoom" fxLayoutAlign="space-around top">
-                <img  src="https://lh3.googleusercontent.com/ZdlV0wAiLRC7_VlD_Z67jLDbN4hsujUCGT0XfaOJW5fSKi-0twIY7OKsgcXV1HtT1oaX4xJKfpZ08TAfJC0kjjb867dVWidzmc-w4a8FisZRy0gLVai6qFBMf7SlcvZHdhy6Zs2DOOM" class="card-img-top" alt="">
-              </div>
-            </div>
-        </div>
-    </div>
+        </mdb-carousel-item>
+    </mdb-carousel>
 </div>

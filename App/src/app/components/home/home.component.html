@@ -1,5 +1,5 @@
 <div class="mt-5 pt-5 container">
-  <section id="sitebanner" class="card wow fadeIn" style="background-image: url(https://lh3.googleusercontent.com/pT0an8pSv3jERWOhkl0WAWz9cVhPAsVaMl89UhLruJ9i5SSJhsAY6sQkX_bMDDNgFR6EnknIjv-j1UjnSxNcEITp2qjjHcrTG2n0RFK0YabOtYwdI8iOUwxHQGtwJR4u5-OYuo4T0-s);">
+  <section id="sitebanner" class="card wow fadeIn" style="background-image: url(https://lh3.googleusercontent.com/vgYfVDjJ6N033y7ZPxwTYguIN2A_ixV-WWt-EVaKhtrb7ItnvBZ-ZCyI4oDKkTcuAQdyQ94yNEE88lxlmRDMCEgeopgnG6R3qcWn6eRn5Nvcj9HH_Z3iH176zXt6lNri6dSq2-wPfs0);">
     <div class="card-body text-white text-center py-5 px-5 my-5">
       <h1 class="mb-4">
         <strong><span class="letterhighlight">A</span>mateur<span class="letterhighlight">A</span>stronomer.Net</strong>
@@ -42,7 +42,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
   <div class="text-center" id="loadingmask" *ngIf="loaded == false">
@@ -52,9 +51,12 @@
     <br/>Loading Please Wait...
   </div>
   <hr class="my-5" *ngIf="this.loaded == true">
+  <div>
+    <input id="blogsearcher" [(ngModel)]="searchText" type="text" placeholder="Search for a Topic here..." *ngIf="loaded == true">
+  </div>
   <section class="text-center">
     <div class="row mb-4 wow fadeIn" >
-      <div class="col-lg-4 col-md-6 mb-4" *ngFor="let blog of blogList | paginate: config;">
+      <div class="col-lg-4 col-md-6 mb-4" *ngFor="let blog of blogList | blogsearch: searchText | paginate: config;">
         <div class="card">
           <div class="view overlay zoom rounded" fxLayoutAlign="space-around top">
             <img  src={{blog.imageURL}} class="card-img-top" alt="">
@@ -68,7 +70,6 @@
                 <mdb-icon fas icon="chevron-right" class="waves-light" mdbWavesEffect></mdb-icon>
               </h5>
             </a>
-
           </div>
         </div>
       </div>

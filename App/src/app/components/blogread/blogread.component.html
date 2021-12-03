@@ -3,6 +3,12 @@
         <img src={{blog.imageURL}} class="center">
     </div>
     <h3>{{blog.blogTitle}}</h3>
+    <!-- <div
+        class="fb-like"
+        data-share="true"
+        data-width="450"
+        data-show-faces="true">
+    </div> -->
     <div id="blog" [innerHTML]="blog.blogEntry | safeHTML: 'html'">
     </div>
 </div>

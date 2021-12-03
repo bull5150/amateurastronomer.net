@@ -1,16 +1,42 @@
-#galleryWrapper {
-    margin: 1%;
-    margin-top: 5%;
+#sitebanner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: calc(100% - 48%) calc(100% + 140px); 
 }
-#imageslider img{
-    height: 800px !important;
-}
-img {
-    height: 260px !important;
-}
-h3 {
-    text-align: center;
+.letterhighlight{
     color: var(--apptheme);
-    font-style: italic;
-    margin-top: -50px;
+}
+.iconhighlight{
+    color: #E1306C;
+}
+a:link {
+    color: #E1306C;
+}  
+a:visited {
+    color: #E1306C;
+}  
+a:hover {
+    color: #E1306C;
+}  
+a:active {
+    color: #E1306C;
+} 
+.instadescript{
+    color: #E1306C;
+    opacity: 75%;
+}
+:global{
+    .controls-top {
+        margin-bottom: 1.88rem !important;
+        text-align: center !important;
+    }
+}
+.fa-3x {
+    font-size: 3em !important;
+}
+
+@media (max-width: 540px) { 
+    #sitebanner {
+        background-position: calc(100% - 48%) calc(100% - 10px); 
+    }
 }

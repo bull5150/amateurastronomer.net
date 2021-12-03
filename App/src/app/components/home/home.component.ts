@@ -5,6 +5,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { BlogsubscribeService } from 'src/app/services/blogsubscribe.service';
 import { ModalContainerComponent } from 'angular-bootstrap-md';
+import { Meta, Title } from '@angular/platform-browser';
 
 declare let ga: Function;
 
@@ -20,11 +21,14 @@ export class HomeComponent implements OnInit {
   public subscribeForm: FormGroup;
   public submodel: blogSubscribe;
   public alert: boolean;
+  public searchText: string;
   config: any;
 
   constructor(private blogService:BlogService, 
     private blogSubService: BlogsubscribeService, 
     private formBuilder: FormBuilder, 
+    private metaService: Meta,
+    private titleService: Title,
     public router: Router) { 
     this.config = {
       itemsPerPage: 6,
@@ -37,8 +41,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.loaded = false;
+    this.searchText = "";
     this.createEmailForm();
     this.alert = false;
+    this.titleService.setTitle('Amateur Astronomer');
+    this.metaService.updateTag({name: 'description', content: 'A Blog from a Amateur on Astronomy, and Astrophotography.  Follow my struggles to hopifully learn from my mistakes.'});
+    this.metaService.updateTag({property: 'og:image', content: 'https://lh3.googleusercontent.com/HsnI6FtKGuZRarKTdqoM-AQDa9SwgIF_pp-J5OFanaxnTN86k3IFNtcRHeZ2abTbsGLKEsCWjFdoPXSJ26d6AsdMA68kkeEm38hwVcEIKEjaxsQVNzpJKfyX98BXFTjmuJHaIeO3dkE'});
     this.blogService.getBlogList().subscribe(response =>{
       this.blogList = response;
       this.blogList.reverse();

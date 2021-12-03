@@ -37,14 +37,9 @@ export class BlogreadComponent implements OnInit {
     this.blogService.getBlog(this.blogID).subscribe(response =>{
       this.blog = response;
       this.titleService.setTitle(this.blog.blogTitle);
-      this.metaService.addTags([
-        {name: 'keywords', content: 'Astronomy, Astrophotography, Blog, Amateur Astronomer'},
-        {name: 'description', content: this.blog.blogDescription},
-        {name: 'author', content: "Jeffrey Heldridge"},
-        {property: 'og:image', content: this.blog.imageURL},
-        {property: 'og:image:width', content: "450"},
-        {property: 'og:image:height', content: "300"},
-      ]);
+      this.metaService.updateTag({name: 'description', content: this.blog.blogDescription});
+      //this.metaService.updateTag({name: 'keywords', content: ''});
+      this.metaService.updateTag({property: 'og:image', content: this.blog.imageURL});
     });
   }
 }
